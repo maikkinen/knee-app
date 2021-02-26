@@ -1,7 +1,4 @@
-.App {
-  text-align: center;
-}
-
+/* This is just as an example here*/
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,19 +10,29 @@
   }
 }
 
-.App-header {
+.Content-wrapper-main {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  overflow: hidden;
 }
 
 .App-link {
   color: #61dafb;
+  text-decoration: none;
+  font-family: 'Azo Sans', Bilo, 'Open Sans';
+  font-weight: 300;
+}
+
+.Knee {
+  z-index: 1200;
+  width: 25%;
+  height: 25%;
 }
 
 @keyframes App-logo-spin {

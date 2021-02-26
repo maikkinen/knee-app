@@ -8,23 +8,31 @@ const App = () => {
     <div className="Content-wrapper-main">
       {/* <img src={logo} className="App-logo" alt="logo" /> */}
       <img id="knee" src={KneeFront} className="Knee" alt="knee" />
-      <button onClick={() => wiggle()}>Text</button>
-      <a
-        className="App-link"
-        href="/"
-        //target="_blank"
-        rel="noopener noreferrer"
-      >
-        Visit our Website
+      <div className="Welcoming-text">
+        <a
+          className="App-link"
+          href="/"
+          //target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit our Website
         </a>
+        <button onClick={() => wiggle()} className="Button-primary">Animate</button>
+      </div>
     </div>
   );
 }
 
 const wiggle = () => {
+  gsap.from("#knee", {
+    scale: 1,
+    rotate: 0,
+  })
   gsap.to("#knee", {
-    rotation: "360",
-    repeat: 1,
+    scale: 1.1,
+    rotate: 5,
+    duration: 3,
+    ease: 'elastic'
   })
 }
 

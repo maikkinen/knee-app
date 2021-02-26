@@ -1,25 +1,31 @@
-import logo from './logo.svg'
 import KneeFront from './assets/KneeFront.svg'
 import './App.css'
+import { gsap } from 'gsap'
 
-function App() {
+const App = () => {
 
   return (
     <div className="Content-wrapper-main">
       {/* <img src={logo} className="App-logo" alt="logo" /> */}
-      <img src={KneeFront} className="Knee" alt="knee" />
-      <div>
-        <a
-          className="App-link"
-          href="/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visit our Website
+      <img id="knee" src={KneeFront} className="Knee" alt="knee" />
+      <button onClick={() => wiggle()}>Text</button>
+      <a
+        className="App-link"
+        href="/"
+        //target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visit our Website
         </a>
-      </div>
     </div>
   );
+}
+
+const wiggle = () => {
+  gsap.to("#knee", {
+    rotation: "360",
+    repeat: 1,
+  })
 }
 
 export default App;

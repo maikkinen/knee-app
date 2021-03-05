@@ -9,10 +9,25 @@ const App = () => {
       <img id="knee" src={KneeFront} className="Knee" alt="knee" />
       <div className="Welcoming-text">
         <a className="App-link" href="/" rel="noopener noreferrer">Visit our Website</a>
-        <button onClick={() => bounce()} className="Button-primary">Animate</button>
+        <button onClick={() => rotate()} className="Button-primary">Animate</button>
       </div>
     </div>
   );
+}
+
+const rotate = () => {
+  console.log(1)
+  var muscle = document.querySelector("#knee #Quadriceps")
+  console.log(2)
+  console.log("muscle", muscle)
+
+  var tl = new TimelineLite({});
+  tl.to(muscle, {
+    scale: 2,
+    rotate: 2,
+    duration: 2
+  })
+  console.log(3)
 }
 
 const wiggle = () => {

@@ -14,10 +14,6 @@
   font-family: 'Azo Sans', sans-serif
 }
 
-.st7 {
-  background-color:#fcfcfc;
-}
-
 .Content-wrapper-main {
   background-color: #282c34;
   /*min-height: 100vh;*/
@@ -42,8 +38,8 @@
 
 .Knee {
   z-index: 1200;
-  width: 30%;
-  height: 30%;
+  width: 25%;
+  height: 25%;
 }
 
 .Welcoming-text {
@@ -58,6 +54,7 @@
   font-family: Bilo, 'Open Sans';
   font-weight: 600;
   cursor: pointer;
+  margin: 0.75rem 0;
 }
 
 .Button-primary:hover {

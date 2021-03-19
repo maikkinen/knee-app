@@ -1,4 +1,5 @@
 /* This is just as an example here*/
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -11,12 +12,12 @@
 }
 
 .body {
-  font-family: 'Azo Sans', sans-serif
+  font-family: 'Bilo', sans-serif;
 }
 
 .Content-wrapper-main {
   background-color: #282c34;
-  /*min-height: 100vh;*/
+  min-height: 100vh;
   max-height: 100vh;
   display: flex;
   flex-direction: row;
@@ -36,15 +37,30 @@
   margin: 0 0 1rem 0;
 }
 
+.healthy-knee-page {
+  height: 100vh;
+  width: 100vw;
+}
+
+.info-text {
+  align-self: center;
+  position: relative;
+  top: 45%;
+  left: 14%;
+  font-size: 2rem;
+  width: 20rem;
+  color: rgb(188, 226, 216);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .Knee {
+  position: absolute;
   z-index: 1200;
   width: 25%;
   height: 25%;
-}
-
-.Welcoming-text {
-  display: flex;
-  flex-direction: column;
+  left: 50%;
+  top: -2%;
+  viewport-fit: auto;
 }
 
 .Button-primary {

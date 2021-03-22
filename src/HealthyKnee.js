@@ -1,7 +1,7 @@
 import React from 'react'
+import Knee from './Knee.js'
 import { gsap } from 'gsap'
 import { TimelineLite } from 'gsap/all'
-import Knee from './Knee.js'
 
 import './App.css'
 

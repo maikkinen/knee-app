@@ -1,8 +1,7 @@
 import React from 'react'
 import KneeArthrosis from './KneeArthrosis'
 import Knee from './Knee'
-import { gsap } from 'gsap'
-import { TimelineLite, TimelineMax } from 'gsap/all'
+import { TimelineLite } from 'gsap/all'
 
 import './App.css'
 
@@ -11,40 +10,13 @@ const Arthrosis = () => {
   return (
     <div className="healthy-knee-page">
       <div className="info-text">
-        Some relevant text to describe the situation in brief.
-        <button onClick={() => skewBackFemur()} className="Button-primary">Reheumathoid Arthritis</button>
+        Explore new ways of curing pain in joints.
       </div>
       <div className="Knee" id="knee-arthrosis">
-        <Knee />
+        <Knee  />
       </div>
     </div>
   )
-}
-
-const TimeLineMaster = () => {
-  var masterTimeline = new TimelineMax({
-
-  });
-}
-
-const liftUpRight = (bodypart) => {
-
-  gsap.timeline({
-    //repeat: -1,
-    defaults: { ease: 'elastic' }
-  })
-    .add('start cycle')
-    .to(bodypart, {
-      scale: 1.02,
-      rotate: 1.05,
-      transformOrigin: 'bottom right 20px',
-      duration: 2.5,
-    })
-    .to(bodypart, {
-      scale: 0.98,
-      rotate: 0,
-      duration: 3.5,
-    })
 }
 
 /* Femur (top bone) skews smoothly to the right. */
@@ -194,6 +166,7 @@ const bounceDown = () => {
 const stretchVertical = () => {
   var tl = new TimelineLite({
     repeat: -1,
+    delay: 2,
   });
 
   tl.add('stretch-vertical')
@@ -214,11 +187,11 @@ const stretchVertical = () => {
 const moveUp = () => {
   var tl = new TimelineLite({
     repeat: -1,
-    delay: 0.7
+    delay: 2
   });
 
   tl.to('#Fibula', {
-    y: 10,
+    y: 25,
     scale: 1.02,
     duration: 3,
     ease: "elastic.config(1.75, 0.2)",
@@ -237,7 +210,7 @@ window.onload = () => {
   skewBackFemur();
   skewRandomTibia();
   //stretchJoints();
-  //ceDown();
+  bounceDown();
   stretchVertical();
   moveUp();
 }

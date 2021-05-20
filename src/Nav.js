@@ -5,9 +5,7 @@ import './Nav.css'
 const Nav = () => {
   return (
     <nav className="navigation-wrapper">
-      <Link className="navigation-link" to="/">Healthy Knee</Link>
-      <Link className="navigation-link" to="/arthrosis">Arthrosis </Link>
-      <Link className="navigation-link" to="/arthritis">Arthritis </Link>
+      <Link className="navigation-link" to="/">Knee</Link>
     </nav>
   )
 }

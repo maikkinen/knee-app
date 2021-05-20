@@ -12,7 +12,8 @@
 }
 
 .body {
-  font-family: 'Bilo', sans-serif;
+  font-family: 'Bilo', 'Montserrat', sans-serif;
+  overflow: hidden;
 }
 
 .Content-wrapper-main {
@@ -26,7 +27,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
   height: 100%;
-  overflow: hidden;
 }
 
 .App-link {

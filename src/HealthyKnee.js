@@ -24,7 +24,6 @@ const kneeAnimationMaster = (bodypart, bodypart2) => {
   console.log('here')
   liftUpRight(bodypart);
   flexingQuadriceps(bodypart2);
-
   //bounce()
 }
 
@@ -149,11 +148,28 @@ const moveUp = () => {
   })
 }
 
+const skewJoints = () => {
+  var tl = new TimelineLite({
+    repeat: -1,
+    delay: 1,
+    duration: 2,
+    scaleX: 0.7
+  });
+  
+  tl.to('#LCL_x2C__articular_cart', {
+    scaleX: 0.5
+  })
+  tl.to('#LCL_x2C__articular_cart', {
+    scaleX: 0.7
+  })
+}
+
 window.onload = () => {
   bounceUp();
   bounceDown();
   stretchVertical();
   moveUp();
+  skewJoints();
 }
 
 /* 
